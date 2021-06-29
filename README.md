@@ -1,4 +1,4 @@
-# coding interview with python
+# coding test with python
 
 
 00 파이썬 문법

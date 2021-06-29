@@ -1,0 +1,13 @@
+# 한 줄의 문자열 입력 받는 함수
+input()
+
+# 리스트의 모든 원소에 각각 특정한 함수를 적용할 때 사용
+list(map(int, input().split()))
+
+# 예시 1  : 공백을 기준으로 구분된 데이터의 개수가 많지 않을 때
+a, b, c = map(int, input().split())
+
+# 빠르게 입력 받기
+# 입력 후 enter가 줄 바꿈 기호로 입력되므로 rstrip() 매서드를 이용해 삭제함
+import sys
+data = sys.stdin.readline().rstrip()

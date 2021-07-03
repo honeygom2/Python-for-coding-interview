@@ -8,3 +8,18 @@ while n > 1:
         n -= 1
         result += 1
 print(result)
+
+# more fast
+n, k = map(int, input().split())
+result = 0
+while True:
+    quotient = (n // k) * k
+    result += (n - quotient)
+    n = quotient
+    if n < k:
+        break
+    else:
+        result += 1
+        n //= k
+result += (n-1)
+print(result)

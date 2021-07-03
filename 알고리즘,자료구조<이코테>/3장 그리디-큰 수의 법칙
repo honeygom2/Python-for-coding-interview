@@ -3,16 +3,13 @@ data = list(map(int, input().split()))
 data.sort()
 first_data = data[n-1]  # 가장 큰 수
 second_data = data[n-2]  # 두 번째로 큰 수
-sum = 0
 
-while True:
-    for i in range(k):  # 가장 큰 수를 K번 더하기
-        if m == 0:
-            break
-        sum += first_data
-        m -= 1
-    if m == 0:
-        break
-    sum += second_data
-    m -= 1
+# 가장 큰 수가 더해지는 횟수
+count = int(m / (k + 1)) * k
+count += m % (k + 1)
+
+sum = 0
+sum = count * first_data  # 가장 큰 수가 더해지는 횟수 * 가장 큰 수
+sum += (m - count) * second_data  # 두 번째로 큰 수가 더해지는 횟 수 * 두 번째로 큰 수
+
 print(sum)
